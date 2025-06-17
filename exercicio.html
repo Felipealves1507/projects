@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>História do GitHub</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #007bff, #6c757d);
+            color: #fff;
+        }
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        img {
+            margin: 20px 0;
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 50%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        p {
+            font-size: 1.2em;
+            margin-bottom: 15px;
+        }
+        .interactive {
+            margin-top: 30px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        #fact {
+            margin-top: 10px;
+            font-weight: bold;
+            color: #ffdd57;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>História do GitHub</h1>
+        <img src="github.png" alt="Logo do GitHub">
+        <div class="content">
+            <p>
+                O GitHub foi fundado em abril de 2008 por Tom Preston-Werner, Chris Wanstrath, PJ Hyett e Scott Chacon. 
+                Ele rapidamente se tornou a maior plataforma de hospedagem de código-fonte do mundo, permitindo que desenvolvedores 
+                colaborassem em projetos utilizando o sistema de controle de versão Git.
+            </p>
+            <p>
+                Em 2018, o GitHub foi adquirido pela Microsoft por US$ 7,5 bilhões, marcando um grande passo na integração 
+                de ferramentas de desenvolvimento com serviços corporativos.
+            </p>
+            <p>
+                Hoje, o GitHub é usado por milhões de desenvolvedores e empresas para criar, compartilhar e colaborar em projetos 
+                de software, desde pequenos scripts até grandes sistemas corporativos.
+            </p>
+        </div>
+        <div class="interactive">
+            <h2>Curiosidades</h2>
+            <button onclick="showFact()">Clique para ver uma curiosidade</button>
+            <p id="fact"></p>
+        </div>
+    </div>
+    <script>
+        function showFact() {
+            const facts = [
+                "O GitHub tem mais de 100 milhões de repositórios hospedados.",
+                "O nome 'GitHub' vem da junção de 'Git' e 'Hub', indicando um centro para projetos Git.",
+                "O primeiro commit no GitHub foi feito em 2008 por Chris Wanstrath.",
+                "GitHub Actions permite automação de fluxos de trabalho diretamente nos repositórios.",
+                "GitHub tem suporte para mais de 200 linguagens de programação."
+            ];
+            const randomFact = facts[Math.floor(Math.random() * facts.length)];
+            document.getElementById('fact').innerText = randomFact;
+        }
+    </script>
+</body>
+</html>
